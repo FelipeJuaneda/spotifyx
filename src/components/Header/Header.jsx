@@ -1,23 +1,19 @@
 import React from "react";
-// Icons
-import { RiSearch2Line } from "react-icons/ri";
+import { AiOutlineMenu, AiOutlineClose, AiOutlineSmile } from "react-icons/ai";
 
-const Header = () => {
+const Header = ({ show, handleToggle }) => {
   return (
-    <header className="flex flex-col md:flex-row items-center justify-around gap-4">
-      <h1 className="text-2xl md:text-3xl font-bold">
-        🌞 Good morning, <span className="text-primary-100">Jorge</span>
-      </h1>
-      <form className="w-full md:w-auto">
-        <div className="relative">
-          <RiSearch2Line className="absolute top-1/2 -translate-y-1/2 left-2" />
-          <input
-            type="text"
-            className="bg-gray-200 outline-none py-2 pl-8 pr-4 rounded-xl w-full md:w-auto"
-            placeholder="Search for projects"
-          />
+    <header className={`header ${show ? "space-toggle" : null}`}>
+      <div className="header-toggle" onClick={handleToggle}>
+        {show ? <AiOutlineClose /> : <AiOutlineMenu />}
+      </div>
+      <div className="flex items-center gap-3 text-2xl md:text-2xl font-medium">
+        <AiOutlineSmile className="text-gradient-to-r from-indigo-500 via-purple-500 to-pink-500" />
+        <div>
+          Bienvenido,{" "}
+          <span className="text-white-color underline decoration-indigo-500">Jorge</span>
         </div>
-      </form>
+      </div>
     </header>
   );
 };
