@@ -8,10 +8,12 @@ const Header = ({ show, handleToggle }) => {
         {show ? <AiOutlineClose /> : <AiOutlineMenu />}
       </div>
       <div className="flex items-center gap-3 text-2xl md:text-2xl font-medium">
-        <AiOutlineSmile className="text-gradient-to-r from-indigo-500 via-purple-500 to-pink-500" />
+        <AiOutlineSmile className="text-white-color" />
         <div>
           Bienvenido,{" "}
-          <span className="text-white-color underline decoration-indigo-500">Jorge</span>
+          <span className="text-white-color hover:text-gray-200 underline decoration-indigo-500 cursor-pointer">
+            Jorge
+          </span>
         </div>
       </div>
     </header>

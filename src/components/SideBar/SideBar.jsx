@@ -25,7 +25,7 @@ const Sidebar = ({ children }) => {
         <nav className="nav">
           <div>
             <Link to="/" className="nav-logo">
-              <img className="logo" src={logo} alt="logo de spotifyx" />
+              <img className="logo hover:rotate-45 transition-all duration-200" src={logo} alt="logo de spotifyx" />
             </Link>
 
             <div className="nav-list">
